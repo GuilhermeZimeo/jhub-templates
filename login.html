@@ -1,0 +1,67 @@
+<!-- Ref: https://gist.github.com/Carreau/4b08dde37004be60db9fac0c9224a6c3 -->
+
+{% extends "templates/login.html" %}
+{% block login %}
+
+<div class='containerTop'>
+    <img src='http://sobedrj.com.br/novo/wp-content/uploads/2019/11/marca_PROADI-SUS_horizontal_cor1.png' width='400px'>
+</div>
+
+<div id='containerBottom'>
+    <div class='imgsBottom'>
+        <img src='http://www.grupofarmabrasil.com.br/wp-content/uploads/2019/07/ministerio-da-saude.jpg' height='100px'>
+    </div>
+    <div class='imgsBottom'>
+        <img src='https://staticr1.blastingcdn.com/media/photogallery/2016/2/8/660x290/b_502x220/hospital-israelita-albert-einstein_596715.jpg' width='250px'>
+    </div>
+</div>
+
+{{ super() }}
+
+<footer class='navbar-default'>
+    <p>Plataforma de Big Data desenvolvida pelo Hospital Israelita Albert Einstein para o Sistema Único de Saúde (SUS).</p>
+</footer>
+
+{% endblock %}
+
+{% block stylesheet %}
+{{ super() }}
+<style>
+.containerTop img {
+    display: block;
+    margin: 0 auto 0 auto;
+}
+
+.imgsBottom {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#containerBottom {
+    text-align: center;
+}
+
+#login-main {
+    margin-top: 1%;
+    height: 100%;
+}
+
+footer {
+    border-top: 1px solid silver;
+    padding: 10px;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+
+footer p{
+    margin: 0 auto 0 auto;
+    text-align: center;
+}
+
+#login-main form {
+    vertical-align: top;
+}
+
+</style>
+{% endblock %}
